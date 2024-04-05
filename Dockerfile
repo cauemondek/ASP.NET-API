@@ -12,6 +12,7 @@
 # Create a stage for building the application.
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 ARG TARGETARCH
+LABEL org.opencontainers.image.source https://github.com/cauemondek/ASP.NET-API
 
 COPY . /source
 
@@ -42,10 +43,12 @@ WORKDIR /app
 
 # Copy everything needed to run the app from the "build" stage.
 COPY --from=build /app .
+COPY . /app
 
 # Switch to a non-privileged user (defined in the base image) that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
 # and https://github.com/dotnet/dotnet-docker/discussions/4764
-USER $APP_UID
+USER root
+RUN chmod 777 /app/app.db
 
-ENTRYPOINT ["dotnet", "dotNet API.dll"]
+ENTRYPOINT ["dotnet", "DOTNET-API.dll"]
