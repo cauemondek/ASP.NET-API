@@ -41,23 +41,23 @@ info: Microsoft.Hosting.Lifetime[14]
 **After configured the project (Downloaded Method or Docker Method)**
 
 - *For acess you will need [Insomnia](https://insomnia.rest/download) or [Postman](https://www.postman.com/)*
-- *After this you can make a GET, POST, PUT or Delete Requisition with JSON in this url "http://localhost:{Your PORT}/v1/todos"*
+- *After this you can make a GET, POST, PUT or Delete Requisition with JSON in this url "http://localhost:{Your-PORT}/v1/todos"*
 - *For POST example:*
 ```json
 {
     "title": "Wash the dishes"
 }
 ```
-- *For GET open your browser in: "http://localhost:{Your PORT}/v1/todos" or make a GET  with this URL*
-- *For GET by ID open your browser in: "http://localhost:{Your PORT}/v1/todos/{The Task ID}" or make a GET requisition with this URL*
-- *For PUT send a JSON in: "http://localhost:{Your PORT}/v1/todos/{The Id of the Task you want to change}, example:*
+- *For GET open your browser in: "http://localhost:{Your-PORT}/v1/todos" or make a GET  with this URL*
+- *For GET by ID open your browser in: "http://localhost:{Your-PORT}/v1/todos/{The-Task-ID}" or make a GET requisition with this URL*
+- *For PUT send a JSON in: "http://localhost:{Your-PORT}/v1/todos/{The-Id-of-the-Task-you-want-to-change}, example:*
 ```json
 {
     "title": "Sweep the floor"
 }
 // Sending to http://localhost:8080/v1/todos/5 for change the ToDo 5
 ```
-- *For DELETE open your browser in: "http://localhost:{Your PORT}/v1/todos/{The Id of the Task you want to delete} or make a DELETE requisition with this URL*
+- *For DELETE open your browser in: "http://localhost:{Your-PORT}/v1/todos/{The-Id-of-the-Task-you-want-to-delete} or make a DELETE requisition with this URL*
 
 ## 🔨 Built with
 - ``C#``
